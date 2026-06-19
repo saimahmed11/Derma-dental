@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --color-warm-ivory: #FAF9F6;
+  --color-alabaster: #F5F3EC;
+  --color-champagne: #C5A880;
+  --color-champagne-hover: #B4966E;
+  --color-sage: #8F9779;
+  --color-slate-silk: #7E8A96;
+  --color-charcoal: #1C1C1C;
+  --color-charcoal-light: #2D2D2D;
+}
+
+/* Elegant custom scrollbar and aesthetics */
+html, body {
+  background-color: var(--color-warm-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* Subtle custom animations or scroll effects */
+.fade-in-on-load {
+  animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.clip-path-slider {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Ensure nice focus states and smooth interactive transitions */
+button, a {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
